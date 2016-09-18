@@ -2,12 +2,369 @@
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+
+
+.nav {
+  overflow-y:scroll;
+  background-color: $dark-blue;
+  opacity: 0.95;
+  width: 100%;
+
+  position: fixed;
+  z-index: 1000;
+  padding-top:40px;
+  .welc {
+    font-size: 97px;
+    color: $blue;
+    margin-left: 80px;
+    position: relative;
+    font-family: 'Bree Serif', Serif;
+  }
+  .menu{
+      font-size: 20px;
+
+      margin-right: 40px;
+      text-align: right;
+      font-weight: 400;
+      padding: 30px;
+      li{
+        background-color: transparent;
+        display: inline;
+        a{
+          //background-color: transparent;
+
+          width: 40px;
+          border-radius: 5px;
+          color:lighten($blue, 25);
+          text-decoration: none;
+          padding: 15px;
+          text-underline: none;
+          font-family: 'EB Garamond', Serif;
+          @include hover-color($blue);
+        }
+
+      }
+    .active-button a{
+      //display: none;
+      background-color: $highlight;
+      padding: 15px;
+      @include hover-color($blue);
+    }
+  }
+
+
+}
+.content {
+
+  position: absolute;
+  margin-top: 200px;
+  #section_1{
+    border: 10px;
+    height: 900px;
+    text-align: center;
+    background-image: url("../media/the road.jpg");
+    background-size: cover;
+    .pic{
+      display: none;
+    }
+    center{
+      width: inherit;
+      text-align: right;
+      font-size: 100px;
+      color: black;
+      z-index: 100;
+
+      top:300px;
+    }
+    h1{
+      width: inherit;
+      font-family: 'Pacifico', cursive;
+      position: relative;
+      font-size: 100px;
+      color: white;
+      z-index: 100;
+
+      top:300px;
+    }
+    p{
+      width: inherit;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      position: relative;
+      font-size: 60px;
+      color: white;
+      z-index: 100;
+
+      top:430px;
+    }
+    .dl{
+      height: 4px;
+      opacity: 0.7;
+      background-color: white;
+      width:70px;
+      align: center;
+      z-index: 100;
+    }
+  }
+  .s12{
+    height: 400px;
+    position: relative;
+    .intro{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 70%;
+      height:80%;
+      padding: 20px;
+    p{
+      font-size: 30px;
+      line-height: 150%;
+      font-family: 'EB Garamond', serif;
+      position: relative;
+      top:50%;
+      //transform: translate(0, -50%);
+    }
+    }
+
+  }
+  #section_2 {
+
+    //width: 100%;
+    //height: auto;
+    position: relative;
+    margin: 60px;
+    .slide{
+
+      h2{
+        top: 20%;
+        display: block;
+        position: absolute;
+        @include h2-style;
+      }
+      .left-h2{
+        left:15%;
+      }
+      .right-h2{
+        right: 15%;
+      }
+      .p1 {
+        position: absolute;
+        width: 40%;
+        padding: 20px;
+        p {
+          @include p-style;
+          color: $whiteback;
+        }
+      }
+      .rm{
+        top:37%;
+        right: 10%;
+      }
+      .rb{
+         bottom: 15%;
+         right: 10%;
+        font-size: 50px;;
+       }
+      .lt{
+        top: 15%;
+        left: 10%;
+      }
+      display: none;
+    }
+    .active-slide {
+      display: block;
+
+    }
+
+    .slider-nav {
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      bottom: 10%;
+
+      //margin-top: 500px;
+      //position: static;
+
+      .arrow-prev {
+        //top: 161px;
+        top:-300px;
+        left: 10px;
+        position: absolute;
+        display: inline-block;
+
+      }
+
+      .arrow-next {
+        top:-300px;
+        right: 10px;
+        position: absolute;
+        display: inline-block;
+      }
+      .slider-dots {
+        list-style: none;
+        display: inline-block;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      .slider-dots li {
+        color: #bbbcbc;
+        display: inline;
+        font-size: 30px;
+        margin-right: 5px;
+      }
+
+      .slider-dots li.active-dot {
+        color: #363636;
+      }
+    }
+
+  }
+  #section_3{
+    height: auto;
+    //position: relative;\t
+    text-align: center;
+    padding: 70px;
+    h2{
+      font-size: 120px;
+      font-family: 'Pacifico', cursive;
+      color: burlywood;
+      position: relative;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+      .modal-content {
+        left:22.5%;
+        position: fixed;
+        bottom: 10%;
+        margin: auto;
+        padding: 20px;
+        width: 55%;
+        p{
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          font-family: 'EB Garamond', serif;
+          color: white;
+          font-size: 25px;
+        }
+
+
+      }
+    }
+
+    .frame {
+      top: 400px;
+      background-color:rgba(255,255,255,0.1);
+      width: 55%;
+      line-height: 200px;
+      z-index: 100;
+      border: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: solid;
+      position: relative;
+      a {
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Pacifico', cursive;
+        position: relative;
+        font-size: 90px;
+        font-weight: lighter;
+        color: white;
+
+
+
+      }
+    }
+    iframe{
+      position: relative;
+      top:40px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  #section_4{
+    height: 800px;
+    background-image: url("../media/dogs.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    h2{
+      top: 150px;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      position: relative;
+      font-size: 120px;
+      font-weight: lighter;
+      color: white;
+      z-index: 100;
+    }
+    div {
+      position: relative;
+      top: 40%;
+      margin: auto;
+      padding: 20px;
+      width: 70%;
+      p{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: 'EB Garamond', serif;
+        color: white;
+        font-size: 25px;
+      }
+
+
+    }
+  }
+
+  #section_5{
+    height: 300px;
+    padding: 10%;
+
+    .footer{
+      text-align: right;
+      padding-top: 30px;
+      height: inherit;
+      position: relative;
+      .block{
+        top:50%;
+        float: left;
+        width: 33%;
+        text-align: center;
+        h2{
+          font-size: 20px;
+          font-family: 'Rock Salt', cursive;
+          color: white;
+        }
+      }
+
+
+    }
+    .social{
+      position: absolute;
+      right: 150px;
+      bottom: 90px;
+      text-align: right;
+      image{
+
+      }
+    }
+
+
+  }
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
-}
+

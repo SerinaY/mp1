@@ -1,0 +1,31 @@
+@mixin hover-color($color){
+  &:hover{
+    color: $color;
+  }
+}
+
+@mixin v-center(){
+  &{
+    position: absolute;
+    top: 50%;
+    transrm: translateY(-50%);
+  }
+}
+@mixin h2-style(){
+  &{
+    font-size: 120px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-align: center;
+
+
+  }
+}
+@mixin p-style(){
+  &{
+
+    font-size: 40px;
+    font-family: 'EB Garamond', serif;
+    line-height: 150%;
+  }
+}

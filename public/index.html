@@ -2,19 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MP1 Starter</title>
+  <title>On the Way</title>
   <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico|Rock+Salt|EB+Garamond|David+Libre" rel="stylesheet">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
+<link rel="icon"
+      type="image/png"
+      href="media/play/ic_launcher_APP.png">
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
-  <div class="cat">
-    <img src="./media/cat.jpg" alt="Cat">
+  <div class="nav">
+
+    <p class="welc">On the Way</p>
+    <ul class="menu">
+        <li class = "button1 active-button">
+            <a href="#section_1">About</a>
+        </li>
+
+        <li class = "button2">
+            <a href="#section_2">Places</a>
+        </li>
+
+        <li class = "button3">
+            <a href="#section_3">Food</a>
+        </li>
+
+        <li class = "button4">
+            <a href="#section_4">Activities</a>
+        </li>
+
+    </ul>
   </div>
+
+  <div class = 'content'>
+      <div id = "section_1">
+
+        <div class="greet">
+            <h1 style="text-align: center">
+                Traveling Albums
+            </h1>
+            <p>
+                The Advanture is Ahead
+            </p>
+
+        </div>
+          <div class = "pic">
+              <img src="media/chair.JPG" style="width: 100%">
+
+          </div>
+
+
+
+      </div>
+      <div class="s12">
+          <img src="media/quote1.png"style="position:absolute;width:80px;left: 80px;top: 25px"/>
+          <div class="intro" align="center">
+              <p>
+                  Hello, I am Wenxin. I like traveling around to taste the refreshing air and spectacular view.
+                  Welcome to world in my eyes.
+              </p>
+          </div>
+          <img src="media/quote2.png" style="position:absolute;width:80px;right: 80px;bottom: 25px"/>
+      </div>
+      <div id = "section_2">
+          <div class="slides">
+              <div class = "slide active-slide">
+                  <h2 class="left-h2">
+                      Alaska
+                  </h2>
+                  <div class="p1 rm">
+                      <p>
+                          And my heart soared,
+                          <br>at the summit of moutains,
+                          <br>in the flavor of crab,
+                          <br>under the sky of northenlight,
+                          <br>and in the steams from the springs.
+                      </p>
+                  </div>
+                  <img src="media/mirror.jpg" style="max-width:100%">
+              </div>
+
+              <div class = "slide">
+                  <h2 class="left-h2">
+                      Dali
+                  </h2>
+                  <div class="p1 rb" align="center">
+                      <p>
+                          Face the sea
+                          <br>feel the warmth of air
+                          <br>smell the flower blossom
+                      </p>
+                  </div>
+                  <img src="media/chair.jpg" style="max-width:100%">
+              </div>
+              <div class = "slide">
+                  <h2 class="right-h2">
+                      Tibet
+                  </h2>
+                  <div class="p1 lt" align="center">
+                      <p >
+                          There comes a song
+                          <br>soft and touching
+                          <br>as if from heaven
+                          <br>and our soul purified
+                      </p>
+                  </div>
+                  <img src="media/tibet.jpg" style="max-width:100%">
+              </div>
+              <div class = "slide">
+                  <h2 class="left-h2">
+                      HuangShan
+                  </h2>
+                  <div class="p1 rb" align="center">
+                      <p>
+                          The God's bonsai.
+                      </p>
+                  </div>
+                  <img src="media/mountain.jpg" style="max-width:100%">
+              </div>
+          </div>
+          <div class="slider-nav">
+              <a href="#" class="arrow-prev"><img src="media/arrow-left.png" style="opacity: 0.5; height:150px;color: white;"></a>
+              <ul class="slider-dots">
+                  <li class="dot active-dot">&bull;</li>
+                  <li class="dot">&bull;</li>
+                  <li class="dot">&bull;</li>
+                  <li class="dot">&bull;</li>
+              </ul>
+              <a href="#" class="arrow-next"><img src="media/arrow-right.png" style="opacity: 0.5; height:150px;"></a>
+
+          </div>
+
+
+      </div>
+
+      <div id = "section_3" >
+          <h2>Yummy</h2>
+          <div class="m">
+
+              <!-- The Modal -->
+              <div class="modal" id="myModal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+
+                      <p>Unique and beguiling, Japan is a country of binaries.
+                          It straddles both the traditional and ultra-modern, and hosts buzzing cities alongside stunning natural landscapes.
+                          Its food is notoriously nutritious, with a diet based around super-fresh, seasonal products.
+                          We've picked ten dishes to seek out when visiting Japan.
+                          <br style="text-align: right">--bbc good food
+                      </p>
+                  </div>
+              </div>
+
+
+          </div>
+          <div class="frame">
+              <a href="" id="myBtn" style="text-align: center">
+                  Japanese Cuisine
+              </a>
+          </div>
+
+          <div class="food">
+              <img src="media/sushi.JPG" style="width: 100%">
+          </div>
+          <iframe width="854" height="480" src="https://www.youtube.com/embed/lMeA_UJRAEQ?autoplay=1" playsinline="0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+
+
+
+      <div id = "section_4">
+
+
+          <h2>Outdoors</h2>
+
+          <div>
+              <p>You're speeding through Alaskan forest, sitting on a sled that's being pulled by some of Alaska's most powerful creatures.
+                  This is dog sledding—and it's not only an Alaskan tradition, but also a state obsession,
+                  one that's celebrated every March with the running of the 1,150-mile Iditarod Sled Dog Race from Anchorage to Nome.
+                  Taking a dogsledding excursion is a chance to see what the fuss is all about. You'll meet Iditarod racers and their dogs and hear what it's like to run this brutal race.
+                  And often, you'll experience the thrill of dogsledding first-hand.
+                  <br>
+                  <br style="text-align: right">--Alaska.org
+              </p>
+          </div>
+
+
+
+      </div>
+
+
+
+      <div id = "section_5" style="background-color: #323756">
+        <div class="footer">
+            <div class="block">
+
+                <img src="media/tips.png" style="width: 50%">
+                <h2>travel tips</h2>
+            </div>
+            <div class="block">
+
+                <img src="media/attr.png" style="width: 50%">
+                <h2>top attractions</h2>
+            </div>
+            <div class="block">
+
+                <img src="media/more.png" style="width: 50%">
+                <h2>more</h2>
+
+            </div>
+
+
+        </div>
+          <div class="social">
+              <img src="media/tumblr.png" style="width: 30px; padding-left: 5px"/>
+              <img src="media/twitter.png" style="width: 30px; padding-left: 5px"/>
+              <img src="media/ins.png" style="width: 30px; padding-left: 5px"/>
+              <img src="media/fb.png" style="width: 30px; padding-left: 5px"/>
+
+          </div>
+      </div>
+  </div>
+
 
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="http://localhost:35729/livereload.js" ></script>
 </body>
 </html>
