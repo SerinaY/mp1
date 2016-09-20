@@ -14,15 +14,13 @@
   z-index: 1000;
   padding-top:40px;
   .welc {
-    font-size: 97px;
     color: $blue;
     margin-left: 80px;
     position: relative;
-    font-family: 'Bree Serif', Serif;
+    font-family: $font-big;
   }
   .menu{
-      font-size: 20px;
-
+      font-size: $size-p;
       margin-right: 40px;
       text-align: right;
       font-weight: 400;
@@ -39,7 +37,7 @@
           text-decoration: none;
           padding: 15px;
           text-underline: none;
-          font-family: 'EB Garamond', Serif;
+          font-family: $font-p;
           @include hover-color($blue);
         }
 
@@ -70,7 +68,7 @@
     center{
       width: inherit;
       text-align: right;
-      font-size: 100px;
+      font-size: $size-big;
       color: black;
       z-index: 100;
 
@@ -78,9 +76,9 @@
     }
     h1{
       width: inherit;
-      font-family: 'Pacifico', cursive;
+      font-family: $font-head;
       position: relative;
-      font-size: 100px;
+      font-size: $size-big;
       color: white;
       z-index: 100;
 
@@ -89,9 +87,9 @@
     p{
       width: inherit;
       text-align: center;
-      font-family: 'Pacifico', cursive;
+      font-family: $font-head;
       position: relative;
-      font-size: 60px;
+      font-size: $size-mid;
       color: white;
       z-index: 100;
 
@@ -118,9 +116,9 @@
       height:80%;
       padding: 20px;
     p{
-      font-size: 30px;
+      font-size: $size-p;
       line-height: 150%;
-      font-family: 'EB Garamond', serif;
+      font-family: $font-p;
       position: relative;
       top:50%;
       //transform: translate(0, -50%);
@@ -164,7 +162,7 @@
       .rb{
          bottom: 15%;
          right: 10%;
-        font-size: 50px;;
+        font-size: $size-mid;
        }
       .lt{
         top: 15%;
@@ -211,7 +209,7 @@
       .slider-dots li {
         color: #bbbcbc;
         display: inline;
-        font-size: 30px;
+        font-size: $size-p;
         margin-right: 5px;
       }
 
@@ -227,8 +225,8 @@
     text-align: center;
     padding: 70px;
     h2{
-      font-size: 120px;
-      font-family: 'Pacifico', cursive;
+      font-size: $size-big;
+      font-family: $font-head;
       color: burlywood;
       position: relative;
     }
@@ -247,17 +245,19 @@
       .modal-content {
         left:22.5%;
         position: fixed;
-        bottom: 10%;
+        bottom: 20%;
         margin: auto;
         padding: 20px;
         width: 55%;
         p{
+          text-align: left;
           display: block;
           margin-right: auto;
           margin-left: auto;
-          font-family: 'EB Garamond', serif;
+          font-family: $font-p;
           color: white;
-          font-size: 25px;
+          font-size: $size-p;
+          line-height: 130%;
         }
 
 
@@ -278,9 +278,9 @@
       a {
         text-decoration: none;
         text-align: center;
-        font-family: 'Pacifico', cursive;
+        font-family: $font-head;
         position: relative;
-        font-size: 90px;
+        font-size: $size-big;
         font-weight: lighter;
         color: white;
 
@@ -304,9 +304,9 @@
     h2{
       top: 150px;
       text-align: center;
-      font-family: 'Pacifico', cursive;
+      font-family: $font-head;
       position: relative;
-      font-size: 120px;
+      font-size: $size-big;
       font-weight: lighter;
       color: white;
       z-index: 100;
@@ -323,7 +323,8 @@
         margin-left: auto;
         font-family: 'EB Garamond', serif;
         color: white;
-        font-size: 25px;
+        line-height: 150%;
+        font-size: $size-p;
       }
 
 
@@ -345,9 +346,11 @@
         width: 33%;
         text-align: center;
         h2{
-          font-size: 20px;
-          font-family: 'EB Garamond', serif;
+          text-decoration: underline;
+          font-size: $size-p;
+          font-family: $font-p;
           color: white;
+          @include hover-color($blue);
         }
       }
 
@@ -358,9 +361,7 @@
       right: 150px;
       bottom: 90px;
       text-align: right;
-      image{
 
-      }
     }
 
 

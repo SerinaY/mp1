@@ -81,7 +81,7 @@ var main=function() {
 
 
     function changeFontSize(scrollNumber) {
-        $('.nav .welc').css('font-size', scrollNumber <= 50 ? 96-(Math.floor(scrollNumber/2)):70);
+        $('.nav .welc').css('font-size', scrollNumber <= 60 ? 100-(Math.floor(scrollNumber/2)):70);
         $('.nav').css('height', scrollNumber <= 50 ? 170-Math.floor(scrollNumber / 2):145);
         $("#section_1 p").css('font-size', scrollNumber <= 100 ? 70-scrollNumber/3.3:40)
         $("#section_1 p").css('opacity', scrollNumber <= 200 ? 1-scrollNumber/200:0)
