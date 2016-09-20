@@ -312,6 +312,7 @@
       z-index: 100;
     }
     div {
+      background-color: rgba(0,0,0,0.3);
       position: relative;
       top: 40%;
       margin: auto;
@@ -342,6 +343,7 @@
       position: relative;
       .block{
         top:50%;
+        //transform: translate(0, -50%);
         float: left;
         width: 33%;
         text-align: center;
