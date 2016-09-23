@@ -17,7 +17,9 @@ var main=function() {
 
     });
     $('.arrow-next').click(function (event) {
+
         event.preventDefault();
+
         var currentSlide = $('.active-slide');
         var nextSlide = currentSlide.next();
 
@@ -29,8 +31,8 @@ var main=function() {
             nextDot = $('.dot').first();
         }
 
-        currentSlide.fadeOut(300).removeClass('active-slide');
-        nextSlide.fadeIn(100).addClass('active-slide');
+        currentSlide.removeClass('active-slide');
+        nextSlide.addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
@@ -51,15 +53,23 @@ var main=function() {
             prevDot = $('.dot').last();
         }
 
-        currentSlide.fadeOut(300).removeClass('active-slide');
-        prevSlide.fadeIn(100).addClass('active-slide');
+        currentSlide.removeClass('active-slide');
+        prevSlide.addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
         return false;
     });
 
-
+    function videoCtrl(currentScroll){
+        var d3 = currentScroll-185 - $('#section_3').position().top;
+        var d4 = currentScroll-185 - $('#section_4').position().top;
+        if (d3>0&&d4<0) {
+            $('video')[0].play();
+        } else {
+            $('video')[0].pause();
+        }
+    }
 
     var modal = document.getElementById('myModal');
 
@@ -81,11 +91,17 @@ var main=function() {
 
 
     function changeFontSize(scrollNumber) {
-        $('.nav .welc').css('font-size', scrollNumber <= 60 ? 100-(Math.floor(scrollNumber/2)):70);
-        $('.nav').css('height', scrollNumber <= 50 ? 170-Math.floor(scrollNumber / 2):145);
-        $("#section_1 p").css('font-size', scrollNumber <= 100 ? 70-scrollNumber/3.3:40)
+        $('header').css('font-size', scrollNumber <= 60 ? 100-(Math.floor(scrollNumber/2)):70);
+        $('.nav').css('height', scrollNumber <= 60 ? 170-Math.floor(scrollNumber):110);
+        $('.menu').css('top', scrollNumber <= 60 ? 120-Math.floor(scrollNumber):60);
+        if(scrollNumber>30) {
+            $("#section_1 p").css('font-size', (scrollNumber <= 130) ? 60 - (scrollNumber - 30) / 3.3 : 30);
+        }
+        else{
+            $("#section_1 p").css('font-size', 60);
+        }
         $("#section_1 p").css('opacity', scrollNumber <= 200 ? 1-scrollNumber/200:0)
-        $("#section_1 p").css('top', scrollNumber <= 50 ? 430-scrollNumber*2:330)
+        $("#section_1 p").css('top', scrollNumber <= 50 ? 410-scrollNumber*2:310);
 
     }
     function indicate(currentScroll) {
@@ -127,6 +143,7 @@ var main=function() {
     function handler(){
         var currentScroll = $window.scrollTop();
         indicate(currentScroll);
+        videoCtrl(currentScroll);
     };
     //$window.on("scroll", function () {});
 }
